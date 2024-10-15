@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tipo_ofertas",
+  "info": {
+    "singularName": "tipo-oferta",
+    "pluralName": "tipo-ofertas",
+    "displayName": "Categoria da Oferta",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nome": {
+      "type": "string",
+      "required": true
+    },
+    "prioridade": {
+      "type": "integer",
+      "required": true
+    },
+    "ofertas": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::oferta.oferta",
+      "mappedBy": "categoria_da_oferta"
+    }
+  }
+}

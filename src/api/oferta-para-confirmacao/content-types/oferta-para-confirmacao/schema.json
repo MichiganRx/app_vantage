@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "oferta_para_confirmacoes",
+  "info": {
+    "singularName": "oferta-para-confirmacao",
+    "pluralName": "oferta-para-confirmacoes",
+    "displayName": "Oferta para Confirmação",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nome_oferta": {
+      "type": "string",
+      "required": true
+    },
+    "descricao_curta": {
+      "type": "string",
+      "required": true,
+      "maxLength": 50
+    },
+    "descricao_longa": {
+      "type": "richtext",
+      "required": true,
+      "maxLength": 250
+    },
+    "valor": {
+      "type": "decimal",
+      "required": true
+    },
+    "banner": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "data_despublicacao": {
+      "type": "datetime"
+    },
+    "tipo_de_oferta": {
+     "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::tipo-oferta.tipo-oferta",
+      "inversedBy": "ofertas",
+      "required": true
+    }
+  }
+}

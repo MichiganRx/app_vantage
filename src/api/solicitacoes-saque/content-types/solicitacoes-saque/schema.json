@@ -1,0 +1,57 @@
+{
+  "kind": "collectionType",
+  "collectionName": "solicitacoes_saques",
+  "info": {
+    "singularName": "solicitacoes-saque",
+    "pluralName": "solicitacoes-saques",
+    "displayName": "Solicitações de Saque",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "id_usuario": {
+      "type": "integer"
+    },
+    "nome_usuario": {
+      "type": "string"
+    },
+    "cpf": {
+      "type": "biginteger"
+    },
+    "ip": {
+      "type": "biginteger"
+    },
+    "valor_saque": {
+      "type": "decimal"
+    },
+    "data_solicitacao": {
+      "type": "datetime"
+    },
+    "tipo_chave": {
+      "type": "string"
+    },
+    "chave_pix": {
+      "type": "string"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "Pendente",
+        "Fraude",
+        "Pagamento enviado",
+        "Pagamento recebido"
+      ],
+      "default": "Pendente"
+    },
+    "primeira_solicitacao": {
+      "type": "enumeration",
+      "enum": [
+        "Sim",
+        "Não"
+      ]
+    }
+  }
+}
